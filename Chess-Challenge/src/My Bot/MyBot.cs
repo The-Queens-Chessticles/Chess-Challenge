@@ -55,6 +55,7 @@ public class MyBot : IChessBot
     public Move Think(Board board, Timer timer)
     {
         // no evaluation at the moment - should return the last move in the list
+        Console.WriteLine(Evaluation(board));
         Move bestMove = NegaMaxRoot(board, maxDepth);
         return bestMove;
     }
@@ -83,19 +84,22 @@ public class MyBot : IChessBot
     // Beginning of search for a move - first iteration and will be slow however will transition to an AlphaBeta Implementation
     private static Move NegaMaxRoot(Board board, int depth)
     {
+        
         int bestScore = -32767;
         int positionScore = 0;
         Move bestMove = Move.NullMove;
         foreach (Move move in board.GetLegalMoves())
         {
-            positionScore = NegaMax(board, depth);
+            board.MakeMove(move);
+            positionScore = -NegaMax(board, depth);
             if (positionScore > bestScore)
             {
                 bestScore = positionScore;
                 bestMove = move;
             }
+            board.UndoMove(move);
         }
-        Console.WriteLine(positionScore);
+        
 
         return bestMove;
 
