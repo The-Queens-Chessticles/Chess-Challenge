@@ -1,8 +1,19 @@
 A general ideas / scratch board for the project. Possibly can be used as a project jounral for later.
 
-7 / 26 / 23 - 
+7/26/23 - 
   A couple of things to note early:
     * NNs seem out of the picture. Considering one file, no outside libraries, and a hard memory limit it is just not feasible. 
     * That being said, we can still use an NN to possibly tune parameters used inside of the code. For example, we might be able to use AI to optomize board values for the pieces.
     * Splitting duties is going to be hard. We're going to have to seriously focus on orthogonailty and making sure changes to code don't cascade into massive failures. 
   Overall we have plenty of time and the posibliites are hype. 
+
+7/29/23 -
+  * Augest 30th to Sep 17th - Izzy-wizzy gonna be gone
+  * We're all babies at C#
+  * One value table is 81 tokens. 
+  * Game_plan - 
+    * Everyone watch the videos.
+    * Try and read some of the book.
+    * Share shit if ye find shit. 
+
+
